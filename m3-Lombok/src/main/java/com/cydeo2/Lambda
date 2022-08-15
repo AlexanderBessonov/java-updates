@@ -1,0 +1,23 @@
+   //...
+    //le
+   // myFunction = (int x, int y)->{
+  //      System.out.println("Result");
+  //      System.out.println("x+y");
+  //  }
+ //   myLambda = () -> 42
+ *************************************************************
+  public boolean test(Apple apple) {
+                       ////////////
+        return apple.getWeight()>200;
+               /////////////////////
+    }
+    //...weightApple = (Apple apple)->  apple.getWeight()>200;
+**********************************************************
+Creating Lambda
+ Step 1:
+    interface MyLambda{}
+ Step 2: created a method, exact same
+   interface MyLambda{
+   void print();/// только один!!!!!!!!
+ }
+ MyLambda abc = () -> System.out.print("Ozzy");
