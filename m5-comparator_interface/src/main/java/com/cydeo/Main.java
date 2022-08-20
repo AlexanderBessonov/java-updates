@@ -16,18 +16,23 @@ public class Main {
         Collections.sort(list);
         System.out.println(list);
 
-        //Desending
+        //Descending
         Collections.sort(list, new MyComparator());
         System.out.println(list);
 
         Collections.sort(list, ((o1, o2) -> (o1 > o2) ? -1 : (o1 < o2) ? 1 : 0));
 
-        //Assending
+        //Ascending
         list.sort(((o1, o2) -> o1.compareTo(o2)));
         System.out.println(list);
 
-        //Desending
+        //Descending
         list.sort(((o2, o1) -> o1.compareTo(o2)));
         System.out.println(list);
+
+        //Ascending
+        list.sort(Integer::compareTo);
+        System.out.println(list);
+
     }
 }
