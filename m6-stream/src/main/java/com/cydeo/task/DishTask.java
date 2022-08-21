@@ -66,7 +66,9 @@ public class DishTask {
                 .forEach(System.out::println);
 
        Stream<Dish> dishStream = DishData.getAll().stream();//
+        // or
                // dishStream.map()//+++
+
 
 
     }
