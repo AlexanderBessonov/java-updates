@@ -2,6 +2,7 @@ package com.cydeo;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class StreamOperations$ {
     public static void main(String[] args) {
@@ -16,11 +17,14 @@ public class StreamOperations$ {
                 .filter(i-> i%2 == 0)
                 .forEach(System.out::println);
 
-        System.out.println("DISTINCT");//2
-        list.stream()
-         //Stream<Integer> str = list.stream()
-                .filter(i-> i%2 == 0)
+        System.out.println("Distinct");
+        Stream<Integer> str = list.stream()
+                .filter(i -> i%2==0)
                 .distinct();
+
+        str.forEach(System.out::println);
+
+
 
         System.out.println("LIMIT");//3
         // str.forEach(System.out::print);
@@ -29,7 +33,7 @@ public class StreamOperations$ {
               .limit(1)
               .forEach(System.out::println);
 
-        System.out.println("SKIP");//4
+        System.out.println("SKIP");//4  //пропускать
         list.stream()
                 .filter(i-> i%2 == 0)
                 .skip(1)

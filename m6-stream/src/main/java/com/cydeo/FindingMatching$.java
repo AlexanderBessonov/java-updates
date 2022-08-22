@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
-public class FindingMatching {
+public class FindingMatching$ {
 
     public static void main(String[] args) {
 
@@ -29,6 +29,7 @@ public class FindingMatching {
         System.out.println(isHealthy2);
 
         System.out.println("FIND ANY");//*****************
+
         Optional<Dish> dish = DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
         System.out.println(dish);
         System.out.println(dish.get());
@@ -39,6 +40,7 @@ public class FindingMatching {
 
 
         System.out.println("PARALLEL STREAMS (Async)");//**************
+
         System.out.println(IntStream.range(0,100).parallel().findAny());
         System.out.println(IntStream.range(0,100).parallel().findFirst());
 
